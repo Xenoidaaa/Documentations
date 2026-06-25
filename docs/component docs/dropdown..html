@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Page</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+     <header>
+        <nav class="main-nav">
+            <button class="hamburger" id="hamburgerId">
+                <img src="../../img/menubar.png" alt="Logo Icon" id="hamburgerIcon">
+                <img src="../../img/x-png-10.png" alt="Close Button" id="closeIcon">
+            </button>
+            <ul class="main-list" id="dropId">
+                <li class="list-group"><a href="../../index.html">Home</a></li>
+                <li class="list-group"><a href="/docs/htmldocs.html"><span class="text-skill">HTML</span> Documentations</a></li>
+                <li class="list-group"><a href="/docs/cssdocs.html"><span class="text-skill">CSS</span> Documentations</a></li>
+                <li class="list-group"><a href="/docs/jsdocs.html"><span class="text-skill">JavaScript</span> Documentations</a></li>
+                <li class="list-group"><a href="/docs/components.html"><span class="text-skill">Component</span> Documentations</a></li>
+            </ul>
+            <img src="../../img/logoW.png" alt="Logo W" class="nav-logo">
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="components-preview">
+
+            <header class="dropdown-header">
+                <h1>Dropdown Menu</h1>
+            </header>
+
+            <div class="code-wrapper">
+
+            <article class="main-code">
+                <h3>HTML Code</h3>
+                <pre><code>
+    &lt;header&gt;
+        &lt;nav class="main&hyphen;nav"&gt;
+
+            &lt;button class="hamburger" id="hamburgerId"&gt;
+                &lt;img src="" alt="" id="hamburgerIcon"&gt;
+                &lt;img src="" alt="" id="closeIcon"&gt;
+            &lt;/button&gt;
+
+            &lt;ul class="main&hyphen;list" id="dropId"&gt;
+                &lt;li class="list&hyphen;group"&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="list&hyphen;group"&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="list&hyphen;group"&gt;&lt;a href="&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="list&hyphen;group"&gt;&lt;a href="&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="list&hyphen;group"&gt;&lt;a href="&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+
+         &lt;/nav&gt;
+    &lt;/header&gt;
+
+                </code></pre>
+            </article>
+
+                <article class="main-code">
+                    <h3>JavaScript Code</h3>
+                    <pre><code>
+const hamburgerButton = document.getElementById ('hamburgerId');
+const sidebarMenu = document.getElementById ('dropId');
+const hamburgerIcon = document.getElementById ('hamburgerIcon');
+const closeIcon = document.getElementById ('closeIcon');
+
+hamburgerButton.addEventListener('click', () => {
+    sidebarMenu.classList.toggle('active');
+
+    if (sidebarMenu.classList.contains('active')) {
+        hamburgerIcon.style.display = 'none';
+        closeIcon.style.display = 'block';
+    } else {
+        hamburgerIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+    }
+});
+                    </code></pre>
+                </article>
+
+                <article class="main-code">
+                    <h3>CSS Code</h3>
+                    <pre><code>
+.main-nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 20px;
+position: relative;
+height: 60px;
+
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    z-index: 1001;
+}
+
+.hamburger img {
+    width: 30px;
+}
+
+#closeIcon {
+    display: none;
+    filter: brightness(0) invert(1);
+}
+
+#hamburgerIcon, #closeIcon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+
+.main-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 300px;
+    background-color: var(--secondary-color);
+    padding: 60px 20px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    list-style: none;
+    gap: 20px;
+    z-index: 1000;
+    border-radius: 10px;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.main-list .list-group {
+    margin: 12px 0;
+}
+
+.main-list a {
+    color: var(--sub-color);
+    text-decoration: none;
+}
+
+.main-list a:hover {
+    color: var(--hover-color);
+    transition: color 0.2s ease;
+}
+
+.main-list.active {
+    display: flex;
+}
+                    </code></pre>
+
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../js.js"></script>
+    
+</body>
+</html>

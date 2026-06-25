@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nextandprev Page</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+     <header>
+        <nav class="main-nav">
+            <button class="hamburger" id="hamburgerId">
+                <img src="../../img/menubar.png" alt="Logo Icon" id="hamburgerIcon">
+                <img src="../../img/x-png-10.png" alt="Close Button" id="closeIcon">
+            </button>
+            <ul class="main-list" id="dropId">
+                <li class="list-group"><a href="../../index.html">Home</a></li>
+                <li class="list-group"><a href="/docs/htmldocs.html"><span class="text-skill">HTML</span> Documentations</a></li>
+                <li class="list-group"><a href="/docs/cssdocs.html"><span class="text-skill">CSS</span> Documentations</a></li>
+                <li class="list-group"><a href="/docs/jsdocs.html"><span class="text-skill">JavaScript</span> Documentations</a></li>
+                <li class="list-group"><a href="/docs/components.html"><span class="text-skill">Component</span> Documentations</a></li>
+            </ul>
+            <img src="../../img/logoW.png" alt="Logo W" class="nav-logo">
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="components-preview">
+
+            <header class="dropdown-header">
+                <h2>Next and Prev</h2>
+            </header>
+
+            <div class="code-wrapper">
+
+                <article class="main-code-nextprev">
+                    <h3>HTML Code</h3>
+                    <pre><code>
+&lt;section class="main&hyphen;project"&gt;
+
+            &lt;div class="scroll&hyphen;wrapper" id="scrollContainer"&gt;
+
+                &lt;article class="list&hyphen;project"&gt;
+                    &lt;figure class="img&hyphen;project"&gt;
+                        &lt;img src="img/project1.png" alt="Project 1"&gt;
+                    &lt;/figure&gt;
+                    &lt;div class="project&hyphen;info"&gt;
+                        &lt;h3&gt;Website MataKuliah&lt;/h3&gt;
+                        &lt;p&gt;&lt;/p&gt;
+                        &lt;a href="" target="&lowbar;blank" rel="noopener noreferrer"&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/article&gt;
+&lt;/section&gt;
+
+ &lt;section class="btn&hyphen;container"&gt;
+            &lt;button class="nav&hyphen;btn prev"&gt;Prev&lt;/button&gt;
+            &lt;button class="nav&hyphen;btn next"&gt;Next&lt;/button&gt;
+ &lt;/section&gt;
+
+                    </code></pre>
+
+                </article>
+
+                <article class="main-code-nextprev">
+                    <h3>javascript Code</h3>
+                    <pre><code>
+const scrollContainer = document.getElementById ('scrollContainer');
+const nextBtn = document.querySelector ('.main-project .nav-btn.next');
+const prevBtn = document.querySelector ('.main-project .nav-btn.prev');
+
+nextBtn.addEventListener ('click', () => {
+    scrollContainer.scrollBy ({ left: 320, behavior: 'smooth' });
+});
+
+prevBtn.addEventListener ('click', () => {
+    scrollContainer.scrollBy ({ left: -320, behavior: 'smooth' });
+});
+
+                    </code></pre>
+                </article>
+
+                <article class="main-code-nextprev">
+                    <h3>CSS Code</h3>
+                    <pre><code>
+.scroll-wrapper {
+display: flex;
+overflow-x: auto;
+flex-wrap: nowrap;
+touch-action: pan-x pan-y;
+scroll-behavior: smooth;
+gap: 20px;
+padding: 20px;
+}
+
+.list-project {
+   display: flex;
+   flex-direction: column;
+   flex-shrink: 0;
+   background-color: #ffffff;
+   box-shadow: 4px 7px 20px rgba(0, 0, 0, 0.432);
+   border-radius: 20px;
+   transition: transform 0.3s;
+   min-width: 300px;
+   padding-top: 15px;
+   margin-bottom: 15px;
+}
+
+.img-achiev img {
+    width: 270px;
+    height: 100%;
+    margin-bottom: 20px;
+    object-fit: contain;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 15px;
+}
+
+.project-info a {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.9rem;
+    background-color: #2563EB;
+    color: #FFFFFF;
+    padding: 5px;
+    width: 100px;
+    margin: 0 auto;
+    margin-top: auto;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 4px 7px 20px rgba(0, 0, 0, 0.432);
+}
+
+/* BUTTON NEXT AND PREV */
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-btn {
+    font-family: "Space Grotesk", sans-serif;
+    background-color: #1E1E1E;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 4px 7px 20px rgba(0, 0, 0, 0.432);
+    cursor: pointer;
+    color: #FFFFFF;
+    margin-bottom: 13%;
+}
+                    </code></pre>
+                </article>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="../../js.js"></script>
+    
+</body>
+</html>
