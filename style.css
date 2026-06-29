@@ -19,10 +19,21 @@
 
 body {
     background: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 body.docs-body {
     background: var(--secondary-color);
+}
+
+footer {
+    margin-top: auto;
+}
+
+main {
+    flex: 1;
 }
 
 /* LOGO W */
@@ -136,6 +147,7 @@ body.docs-body {
     margin-top: -85px ;
     position: relative;
     z-index: 1;
+    flex: 1;
    
 }
 
@@ -510,6 +522,7 @@ body.docs-body {
     align-items: center;
     text-align: center;
     gap: 10px;
+    margin-top: 20px;
 }
 
 .text-compo {
@@ -521,7 +534,6 @@ body.docs-body {
     color: var(--desk-color);
     font-family: "Inter Tight", sans-serif;
     max-width: 500px;
-
 }
 
 .logo-wrapper img {
@@ -548,7 +560,7 @@ body.docs-body {
     margin: 0 auto;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 769px) {
     .card-wrapper {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -573,6 +585,7 @@ body.docs-body {
     text-align: center;
     gap: 15px;
     width: 100%;
+    border: 1px solid var(--border-color);
 }
 
 .card-header {
@@ -588,6 +601,7 @@ body.docs-body {
 
 .video-capt {
     color: var(--desk-color);
+    padding-top: 10px;
 }
 
 .video-capt {
@@ -684,6 +698,20 @@ body.docs-body {
    | NEXTPREV PAGE |
    ================= */
 
+   .code-wrapper-nextprev {
+    background-color: var(--third-color);
+    width: 550px;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-top: 4rem;
+   }
+
+   .components-preview-nextprev pre, code{
+    font-size: 0.8rem;
+
+   }
+
+
    .main-code-nextprev {
     display: flex;
     flex-direction: column;
@@ -694,11 +722,65 @@ body.docs-body {
    .main-code-nextprev h3 {
     font-family: "JetBrains Mono", monospace;
     color: #2ecc71;
+    padding-top: 15px;
    }
 
-   .main-code-nextprev pre, code {
-    font-size: 0.8rem;
+   @media screen and (max-width: 768px) {
+
+    .code-wrapper-nextprev {
+        width: 350px;
+    }
+    
    }
+
+   /*=================
+   | TRIGGERED PAGE |
+   ================= */
+
+   .code-wrapper-triggered {
+    background-color: var(--third-color);
+    width: 600px;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-top: 4rem;
+   }
+
+   .js-preview-triggered pre, code{
+    font-size: 0.7rem;
+
+   }
+
+
+   .main-code-triggered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .main-code-triggered h3 {
+    font-family: "JetBrains Mono", monospace;
+    color: #2ecc71;
+    padding-top: 15px;
+   }
+
+
+   @media screen and (max-width: 768px) {
+
+    .code-wrapper-triggered {
+        width: 350px;
+    }
+
+    .js-preview-triggered pre, code {
+        font-size: 0.37rem !important;
+    }
+
+    .text-trigger {
+        font-size: 1.1rem;
+    }
+    
+   }
+
 
 
 

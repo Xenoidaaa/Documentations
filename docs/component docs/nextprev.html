@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nextandprev Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;1,300&family=JetBrains+Mono:ital,wght@0,800;1,800&family=Lexend+Deca:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -27,32 +28,17 @@
 
     <main>
 
-        <section class="components-preview">
+        <section class="components-preview-nextprev">
 
             <header class="dropdown-header">
                 <h2>Next and Prev</h2>
             </header>
 
-            <div class="code-wrapper">
+            <div class="code-wrapper-nextprev">
 
                 <article class="main-code-nextprev">
                     <h3>HTML Code</h3>
                     <pre><code>
-&lt;section class="main&hyphen;project"&gt;
-
-            &lt;div class="scroll&hyphen;wrapper" id="scrollContainer"&gt;
-
-                &lt;article class="list&hyphen;project"&gt;
-                    &lt;figure class="img&hyphen;project"&gt;
-                        &lt;img src="img/project1.png" alt="Project 1"&gt;
-                    &lt;/figure&gt;
-                    &lt;div class="project&hyphen;info"&gt;
-                        &lt;h3&gt;Website MataKuliah&lt;/h3&gt;
-                        &lt;p&gt;&lt;/p&gt;
-                        &lt;a href="" target="&lowbar;blank" rel="noopener noreferrer"&gt;&lt;/a&gt;
-                    &lt;/div&gt;
-                &lt;/article&gt;
-&lt;/section&gt;
 
  &lt;section class="btn&hyphen;container"&gt;
             &lt;button class="nav&hyphen;btn prev"&gt;Prev&lt;/button&gt;
@@ -84,57 +70,7 @@ prevBtn.addEventListener ('click', () => {
                 <article class="main-code-nextprev">
                     <h3>CSS Code</h3>
                     <pre><code>
-.scroll-wrapper {
-display: flex;
-overflow-x: auto;
-flex-wrap: nowrap;
-touch-action: pan-x pan-y;
-scroll-behavior: smooth;
-gap: 20px;
-padding: 20px;
-}
 
-.list-project {
-   display: flex;
-   flex-direction: column;
-   flex-shrink: 0;
-   background-color: #ffffff;
-   box-shadow: 4px 7px 20px rgba(0, 0, 0, 0.432);
-   border-radius: 20px;
-   transition: transform 0.3s;
-   min-width: 300px;
-   padding-top: 15px;
-   margin-bottom: 15px;
-}
-
-.img-achiev img {
-    width: 270px;
-    height: 100%;
-    margin-bottom: 20px;
-    object-fit: contain;
-}
-
-.project-info {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 15px;
-}
-
-.project-info a {
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 0.9rem;
-    background-color: #2563EB;
-    color: #FFFFFF;
-    padding: 5px;
-    width: 100px;
-    margin: 0 auto;
-    margin-top: auto;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    box-shadow: 4px 7px 20px rgba(0, 0, 0, 0.432);
-}
 
 /* BUTTON NEXT AND PREV */
 
